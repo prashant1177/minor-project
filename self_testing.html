@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personality Quiz</title>
+    <link rel="icon" href="https://i.pinimg.com/736x/e7/76/dd/e776dde21dd229b6210c418f208b6917.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./nav.css" />
+    <style>
+      .resultp {
+        text-align: justify;
+        margin-top: 15px;
+        font-weight: lighter;
+      }
+      h3 {
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul class="ulist">
+        <a href="Index.html"><li class="listed">Home</li></a>
+        <a href="./imp_sites.html"><li class="listed">Important Sites</li></a>
+        <a href="./about.html"><li class="listed">About us</li></a>
+      </ul>
+    </nav>
+
+    <h2 class="head">SELF TESTING</h2>
+
+    <div class="quiz-container" id="quiz-container">
+      <button id="start-btn">Start Test</button>
+      <div id="question-container">
+        <div id="question"></div>
+        <div id="options"></div>
+      </div>
+      <div class="questionText" id="questionText">
+        <p class="queHeading">Stress: What are your main stressors in life right now?</p>
+        <div class="options">
+          <label
+            ><textarea
+              type="text"
+              name="stressor"
+              value=""
+              placeholder="Enter your answer"
+              id="stressorText"
+          ></textarea></label>
+        </div>
+    </div>
+      <div class="btncontainer" id="btncontainer">
+        <button id="prev-btn" style="display: none">
+          Previous
+        </button>
+        <button id="next-btn">Next</button>
+      </div>
+    </div>
+    
+    <div id="Result" class="Result-container"></div>
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/generative-ai": "https://esm.run/@google/generative-ai"
+        }
+      }
+    </script>
+    <script type="module" src="scriptcopy.mjs"></script>
+  </body>
+</html>
